@@ -1,11 +1,24 @@
-<div class="row">
-  <div class="col-sm-12 col-sm-6 col-md-8"><div>.col-sm-12 .col-sm-6 .col-md-8</div></div>
-  <div class="col-sm-6 col-md-4"><div>.col-sm-6 .col-md-4</div></div>
+<div #markup class="markup">
+  <div class="row">
+    <div class="col-sm-12 col-sm-6 col-md-8">
+      <div>.col-sm-12 .col-sm-6 .col-md-8</div>
+    </div>
+    <div class="col-sm-6 col-md-4">
+      <div>.col-sm-6 .col-md-4</div>
+    </div>
+  </div>
+  <br />
+  <div class="row">
+    <div class="col-sm-6 col-sm-4">
+      <div>.col-sm-6 .col-sm-4</div>
+    </div>
+    <div class="col-sm-6 col-sm-4">
+      <div>.col-sm-6 .col-sm-4</div>
+    </div>
+    <div class="clearfix hidden-sm-up"></div>
+    <div class="col-sm-6 col-sm-4">
+      <div>.col-sm-6 .col-sm-4</div>
+    </div>
+  </div>
 </div>
-<br />
-<div class="row">
-  <div class="col-sm-6 col-sm-4"><div>.col-sm-6 .col-sm-4</div></div>
-  <div class="col-sm-6 col-sm-4"><div>.col-sm-6 .col-sm-4</div></div>
-  <div class="clearfix hidden-sm-up"></div>
-  <div class="col-sm-6 col-sm-4"><div>.col-sm-6 .col-sm-4</div></div>
-</div>
+<app-style-guide-code [id]="'layout-grid'" [title]="'Layout - Grid'" [html]="html" [bootstrapUrlSuffix]="'/layout/grid'"></app-style-guide-code>

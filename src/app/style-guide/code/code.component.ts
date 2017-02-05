@@ -13,28 +13,16 @@ import { Observable } from 'rxjs/Observable';
 export class StyleGuideCodeComponent implements OnInit {
     @Input() id = '';
     @Input() title = '';
+    @Input() html = '';
     @Input() bootstrapUrlSuffix = '';
-    bootstrapUrlPrefix = 'http://v4-alpha.getbootstrap.com';
-    html: string;
+    bootstrapUrlPrefix = '//v4-alpha.getbootstrap.com';
     showStyleGuideLink = false;
     constructor(private http: Http, domSanitizer: DomSanitizer) { }
 
     ngOnInit() {
         this.showStyleGuideLink = !location.href.endsWith('style-guide');
-        if (this.id !== '') {
-            this.getCode().subscribe(html => {
-                this.html = html;
-            });
-        }
         setTimeout(function () {
             Prism.highlightAll();
         }, 1000);
-    }
-
-    getCode(): Observable<any> {
-        return this.http
-            .get('/app/style-guide/' + this.id + '/' + this.id + '-markup.html')
-            .map(response => response.text() as string)
-            .catch((error: any) => Observable.throw(error));
     }
 }

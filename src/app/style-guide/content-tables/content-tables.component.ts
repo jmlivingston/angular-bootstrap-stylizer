@@ -1,9 +1,13 @@
-import { Component } from '@angular/core';
-
+import { Component, ElementRef, ViewChild, OnInit } from '@angular/core';
 @Component({
   selector: 'app-style-guide-content-tables',
-  template: '<app-style-guide-code [id]="\'content-tables\'" [title]="\'Content - Tables\'" [bootstrapUrlSuffix]="\'/content/tables\'"></app-style-guide-code>',
+  templateUrl: './content-tables-markup.html',
   styleUrls: ['../style-guide.component.scss']
 })
-
-export class StyleGuideContentTablesComponent { }
+export class StyleGuideContentTablesComponent implements OnInit {
+  @ViewChild('markup') markup: ElementRef;
+  html: string;
+  ngOnInit() {
+    this.html = this.markup.nativeElement.innerHTML;
+  }
+}

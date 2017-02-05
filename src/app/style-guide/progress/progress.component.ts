@@ -1,9 +1,13 @@
-import { Component } from '@angular/core';
-
+import { Component, ElementRef, ViewChild, OnInit } from '@angular/core';
 @Component({
   selector: 'app-style-guide-progress',
-  template: '<app-style-guide-code [id]="\'progress\'" [title]="\'Progress\'" [bootstrapUrlSuffix]="\'/components/progress\'"></app-style-guide-code>',
+  templateUrl: './progress-markup.html',
   styleUrls: ['../style-guide.component.scss']
 })
-
-export class StyleGuideProgressComponent { }
+export class StyleGuideProgressComponent implements OnInit {
+  @ViewChild('markup') markup: ElementRef;
+  html: string;
+  ngOnInit() {
+    this.html = this.markup.nativeElement.innerHTML;
+  }
+}

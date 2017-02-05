@@ -1,9 +1,13 @@
-import { Component } from '@angular/core';
-
+import { Component, ElementRef, ViewChild, OnInit } from '@angular/core';
 @Component({
   selector: 'app-style-guide-list-group',
-  template: '<app-style-guide-code [id]="\'list-group\'" [title]="\'List Group\'" [bootstrapUrlSuffix]="\'/components/list-group\'"></app-style-guide-code>',
+  templateUrl: './list-group-markup.html',
   styleUrls: ['../style-guide.component.scss']
 })
-
-export class StyleGuideListGroupComponent { }
+export class StyleGuideListGroupComponent implements OnInit {
+  @ViewChild('markup') markup: ElementRef;
+  html: string;
+  ngOnInit() {
+    this.html = this.markup.nativeElement.innerHTML;
+  }
+}

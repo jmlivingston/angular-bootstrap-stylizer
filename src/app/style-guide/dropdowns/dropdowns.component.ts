@@ -1,9 +1,13 @@
-import { Component } from '@angular/core';
-
+import { Component, ElementRef, ViewChild, OnInit } from '@angular/core';
 @Component({
   selector: 'app-style-guide-dropdowns',
-  template: '<app-style-guide-code [id]="\'dropdowns\'" [title]="\'Dropdowns\'" [bootstrapUrlSuffix]="\'/components/dropdowns\'"></app-style-guide-code>',
+  templateUrl: './dropdowns-markup.html',
   styleUrls: ['../style-guide.component.scss']
 })
-
-export class StyleGuideDropdownsComponent { }
+export class StyleGuideDropdownsComponent implements OnInit {
+  @ViewChild('markup') markup: ElementRef;
+  html: string;
+  ngOnInit() {
+    this.html = this.markup.nativeElement.innerHTML;
+  }
+}

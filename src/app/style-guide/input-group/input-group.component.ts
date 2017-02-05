@@ -1,9 +1,13 @@
-import { Component } from '@angular/core';
-
+import { Component, ElementRef, ViewChild, OnInit } from '@angular/core';
 @Component({
   selector: 'app-style-guide-input-group',
-  template: '<app-style-guide-code [id]="\'input-group\'" [title]="\'Input Group\'" [bootstrapUrlSuffix]="\'/components/input-group\'"></app-style-guide-code>',
+  templateUrl: './input-group-markup.html',
   styleUrls: ['../style-guide.component.scss']
 })
-
-export class StyleGuideInputGroupComponent { }
+export class StyleGuideInputGroupComponent implements OnInit {
+  @ViewChild('markup') markup: ElementRef;
+  html: string;
+  ngOnInit() {
+    this.html = this.markup.nativeElement.innerHTML;
+  }
+}

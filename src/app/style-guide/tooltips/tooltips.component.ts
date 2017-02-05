@@ -1,7 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild, OnInit } from '@angular/core';
 @Component({
   selector: 'app-style-guide-tooltips',
-  template: '<app-style-guide-code [id]="\'tooltips\'" [title]="\'Tooltips\'" [bootstrapUrlSuffix]="\'/components/tooltips\'"></app-style-guide-code>',
+  templateUrl: './tooltips-markup.html',
   styleUrls: ['../style-guide.component.scss']
 })
-export class StyleGuideTooltipsComponent { }
+export class StyleGuideTooltipsComponent implements OnInit {
+  @ViewChild('markup') markup: ElementRef;
+  html: string;
+  ngOnInit() {
+    this.html = this.markup.nativeElement.innerHTML;
+  }
+}

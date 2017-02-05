@@ -1,9 +1,13 @@
-import { Component } from '@angular/core';
-
+import { Component, ElementRef, ViewChild, OnInit } from '@angular/core';
 @Component({
   selector: 'app-style-guide-collapse',
-  template: '<app-style-guide-code [id]="\'collapse\'" [title]="\'Collapse\'" [bootstrapUrlSuffix]="\'/components/collapse\'"></app-style-guide-code>',
+  templateUrl: './collapse-markup.html',
   styleUrls: ['../style-guide.component.scss']
 })
-
-export class StyleGuideCollapseComponent { }
+export class StyleGuideCollapseComponent implements OnInit {
+  @ViewChild('markup') markup: ElementRef;
+  html: string;
+  ngOnInit() {
+    this.html = this.markup.nativeElement.innerHTML;
+  }
+}

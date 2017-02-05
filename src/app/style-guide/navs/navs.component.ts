@@ -1,9 +1,13 @@
-import { Component } from '@angular/core';
-
+import { Component, ElementRef, ViewChild, OnInit } from '@angular/core';
 @Component({
   selector: 'app-style-guide-navs',
-  template: '<app-style-guide-code [id]="\'navs\'" [title]="\'Navs\'" [bootstrapUrlSuffix]="\'/components/navs\'"></app-style-guide-code>',
+  templateUrl: './navs-markup.html',
   styleUrls: ['../style-guide.component.scss']
 })
-
-export class StyleGuideNavsComponent { }
+export class StyleGuideNavsComponent implements OnInit {
+  @ViewChild('markup') markup: ElementRef;
+  html: string;
+  ngOnInit() {
+    this.html = this.markup.nativeElement.innerHTML;
+  }
+}

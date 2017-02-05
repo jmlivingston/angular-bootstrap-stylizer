@@ -1,9 +1,13 @@
-import { Component } from '@angular/core';
-
+import { Component, ElementRef, ViewChild, OnInit } from '@angular/core';
 @Component({
   selector: 'app-style-guide-popovers',
-  template: '<app-style-guide-code [id]="\'popovers\'" [title]="\'Popovers\'" [bootstrapUrlSuffix]="\'/components/popovers\'"></app-style-guide-code>',
+  templateUrl: './popovers-markup.html',
   styleUrls: ['../style-guide.component.scss']
 })
-
-export class StyleGuidePopoversComponent { }
+export class StyleGuidePopoversComponent implements OnInit {
+  @ViewChild('markup') markup: ElementRef;
+  html: string;
+  ngOnInit() {
+    this.html = this.markup.nativeElement.innerHTML;
+  }
+}
