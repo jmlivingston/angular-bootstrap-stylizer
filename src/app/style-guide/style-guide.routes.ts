@@ -31,11 +31,11 @@ import { StyleGuideTooltipsComponent } from './tooltips/tooltips.component';
 export const StyleGuideRoutes: Route[] = [
   {
     path: '',
-    redirectTo: '#/style-guide',
+    redirectTo: '/style-guide',
     pathMatch: 'full'
   },
   {
-    path: '#/style-guide',
+    path: 'style-guide',
     component: StyleGuideComponent
   },
   { path: 'style-guide/alerts', component: StyleGuideAlertsComponent },

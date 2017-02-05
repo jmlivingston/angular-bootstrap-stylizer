@@ -10,7 +10,7 @@
     </h2>
     <ul>
       <li>
-        Clone first with: <strong>git clone https://github.com/jmlivingston/Angular-bootstrap-stylizer</strong>
+        Clone first with: <strong>git clone https://github.com/jmlivingston/angular-bootstrap-stylizer</strong>
       </li>
       <li>
         Install packages and run: <strong>npm install & npm run</strong>
@@ -71,25 +71,22 @@
     <h4>Original</h4>
     <div class="row">
       <div class="col-lg-3 col-md-4 col-sm-6" *ngFor="let item of originalThemes">
-        <!--[disabled]="item.name === currentTheme.name ? 'disabled' : false"-->
         <button class="btn btn-block mb-2" [ngClass]="item.name === currentTheme.name ? 'btn-primary' : 'btn-secondary'"
-          (click)="updateTheme(item)">{{item.name.replace('Custom - ', '')}}</button>
+          (click)="updateTheme(item)" [disabled]="item.name === currentTheme.name ? 'disabled' : false">{{item.name.replace('Custom - ', '')}}</button>
       </div>
     </div>
     <h4>Custom</h4>
     <div class="row">
-      <!--{customThemeButtons}-->
       <div class="col-lg-3 col-md-4 col-sm-6" *ngFor="let item of customThemes">
         <button class="btn btn-block mb-2" [ngClass]="item.name === currentTheme.name ? 'btn-primary' : 'btn-secondary'"
-          (click)="updateTheme(item)">{{item.name.replace('Custom - ', '')}}</button>
+          (click)="updateTheme(item)" [disabled]="item.name === currentTheme.name ? 'disabled' : false">{{item.name.replace('Custom - ', '')}}</button>
       </div>
     </div>
     <h4>Bootswatch</h4>
     <div class="row">
-      <!--{bootswatchThemeButtons}-->
       <div class="col-lg-3 col-md-4 col-sm-6" *ngFor="let item of bootswatchThemes">
         <button class="btn btn-block mb-2" [ngClass]="item.name === currentTheme.name ? 'btn-primary' : 'btn-secondary'"
-          (click)="updateTheme(item)">{{item.name.replace('Custom - ', '')}}</button>
+          (click)="updateTheme(item)" [disabled]="item.name === currentTheme.name ? 'disabled' : false">{{item.name.replace('Custom - ', '')}}</button>
       </div>
     </div>
 
