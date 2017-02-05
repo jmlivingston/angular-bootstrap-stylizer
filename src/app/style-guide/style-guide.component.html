@@ -1,0 +1,174 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-8">
+      <h1>{{appTitle}} - Style Guide</h1>
+    </div>
+    <div class="col-sm-4">
+      <br />
+      <button class="btn btn-secondary float-right" (click)="expandCollapse()">Expand / Collapse</button>
+    </div>
+  </div>
+  <br />
+  <a class="btn btn-primary btn-sm" href="https://zavoloklom.github.io/material-design-iconic-font/icons.html" target="new">Material Design Icons</a>
+  <div class="row">
+    <div class="col-sm-12 p-b-2">
+      <hr />
+      <input type="text" class="form-control" placeholder="Search" aria-describedby="basic-addon1" [(ngModel)]="search" />
+      <br />
+    </div>
+  </div>
+</div>
+<div *ngIf="'alert'.indexOf(search) !== -1">
+  <app-style-guide-alerts></app-style-guide-alerts>
+  <div class="container">
+    <hr />
+  </div>
+</div>
+<div *ngIf="'breadcrumb'.indexOf(search) !== -1">
+  <app-style-guide-breadcrumb></app-style-guide-breadcrumb>
+  <div class="container">
+    <hr />
+  </div>
+</div>
+<div *ngIf="'buttons'.indexOf(search) !== -1">
+  <app-style-guide-buttons></app-style-guide-buttons>
+  <div class="container">
+    <hr />
+  </div>
+</div>
+<div *ngIf="'button group'.indexOf(search) !== -1">
+  <a name="button-group"></a>
+  <app-style-guide-button-group></app-style-guide-button-group>
+  <div class="container">
+    <hr />
+  </div>
+</div>
+<div *ngIf="'card'.indexOf(search) !== -1">
+  <app-style-guide-card></app-style-guide-card>
+  <div class="container">
+    <hr />
+  </div>
+</div>
+<div *ngIf="'carousel'.indexOf(search) !== -1">
+  <app-style-guide-carousel></app-style-guide-carousel>
+  <div class="container">
+    <hr />
+  </div>
+</div>
+<div *ngIf="'collapse'.indexOf(search) !== -1">
+  <app-style-guide-collapse></app-style-guide-collapse>
+  <div class="container">
+    <hr />
+  </div>
+</div>
+<div *ngIf="'content - figures'.indexOf(search) !== -1">
+  <app-style-guide-content-figures></app-style-guide-content-figures>
+  <div class="container">
+    <hr />
+  </div>
+</div>
+<div *ngIf="'content - images'.indexOf(search) !== -1">
+  <app-style-guide-content-images></app-style-guide-content-images>
+  <div class="container">
+    <hr />
+  </div>
+</div>
+<div *ngIf="'content - tables'.indexOf(search) !== -1">
+  <app-style-guide-content-tables></app-style-guide-content-tables>
+  <div class="container">
+    <hr />
+  </div>
+</div>
+<div *ngIf="'content - typography'.indexOf(search) !== -1">
+  <app-style-guide-content-typography></app-style-guide-content-typography>
+  <div class="container">
+    <hr />
+  </div>
+</div>
+<div *ngIf="'dropdowns'.indexOf(search) !== -1">
+  <app-style-guide-dropdowns></app-style-guide-dropdowns>
+  <div class="container">
+    <hr />
+  </div>
+</div>
+<div *ngIf="'forms'.indexOf(search) !== -1">
+  <app-style-guide-forms></app-style-guide-forms>
+  <div class="container">
+    <hr />
+  </div>
+</div>
+<div *ngIf="'input group'.indexOf(search) !== -1">
+  <app-style-guide-input-group></app-style-guide-input-group>
+  <div class="container">
+    <hr />
+  </div>
+</div>
+<div *ngIf="'jumbotron'.indexOf(search) !== -1">
+  <app-style-guide-jumbotron></app-style-guide-jumbotron>
+  <div class="container">
+    <hr />
+  </div>
+</div>
+<div *ngIf="'grid'.indexOf(search) !== -1">
+  <app-style-guide-layout-grid></app-style-guide-layout-grid>
+  <div class="container">
+    <hr />
+  </div>
+</div>
+<div *ngIf="'media object'.indexOf(search) !== -1">
+  <app-style-guide-layout-media-object></app-style-guide-layout-media-object>
+  <div class="container">
+    <hr />
+  </div>
+</div>
+<div *ngIf="'list group'.indexOf(search) !== -1">
+  <app-style-guide-list-group></app-style-guide-list-group>
+  <div class="container">
+    <hr />
+  </div>
+</div>
+<div *ngIf="'modal'.indexOf(search) !== -1">
+  <app-style-guide-modal></app-style-guide-modal>
+  <div class="container">
+    <hr />
+  </div>
+</div>
+<div *ngIf="'nav-bar'.indexOf(search) !== -1">
+  <app-style-guide-nav-bar></app-style-guide-nav-bar>
+  <div class="container">
+    <hr />
+  </div>
+</div>
+<div *ngIf="'navs'.indexOf(search) !== -1">
+  <app-style-guide-navs></app-style-guide-navs>
+  <div class="container">
+    <hr />
+  </div>
+</div>
+<div *ngIf="'pagination'.indexOf(search) !== -1">
+  <app-style-guide-pagination></app-style-guide-pagination>
+  <div class="container">
+    <hr />
+  </div>
+</div>
+<div *ngIf="'popovers'.indexOf(search) !== -1">
+  <app-style-guide-popovers></app-style-guide-popovers>
+  <div class="container">
+    <hr />
+  </div>
+</div>
+<div *ngIf="'progress'.indexOf(search) !== -1">
+  <app-style-guide-progress></app-style-guide-progress>
+  <div class="container">
+    <hr />
+  </div>
+</div>
+<div *ngIf="'tag'.indexOf(search) !== -1">
+  <app-style-guide-tag></app-style-guide-tag>
+  <div class="container">
+    <hr />
+  </div>
+</div>
+<div *ngIf="'tooltips'.indexOf(search) !== -1">
+  <app-style-guide-tooltips></app-style-guide-tooltips>
+</div>
