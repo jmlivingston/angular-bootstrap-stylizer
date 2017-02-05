@@ -4,38 +4,42 @@
             <button class="navbar-toggler mr-2" type="button" data-toggle="collapse" aria-expanded="false" aria-controls="exCollapsingNavbar2"
                 data-target="#exCollapsingNavbar2" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
-                </button>
-                <a class="navbar-brand" href="#/">Home</a>
-                <div class="collapse navbar-collapse" id="exCollapsingNavbar2" aria-expanded="false">
-                    <ul class="nav navbar-nav mr-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#/style-guide">Style Guide <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        {{currentTheme.name}}
-                                    </a>
-                            <!--[disabled]="item.name === currentTheme.name ? 'disabled' : false" -->
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item" (click)="updateTheme(item)" *ngFor="let item of themes">
-                                    {{item.name}}
-                                </a>
-                            </div>
-                        </li>
-                    </ul>
-                    <ul class="nav navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="//www.johnlivingston.io" target="_new">
-                                    johnlivingston.io
-                                </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="//github.com/jmlivingston/angular-bootstrap-stylizer" target="_new">
-                                        GitHub
-                                    </a>
-                        </li>
-                    </ul>
-                </div>
+            </button>
+            <a class="navbar-brand" href="#/">Angular Bootstrap Stylizer</a>
+            <div class="collapse navbar-collapse" id="exCollapsingNavbar2" aria-expanded="false">
+                <ul class="nav navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#/style-guide">Style Guide <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            {{currentTheme.name}}
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" (click)="updateTheme(item)" *ngFor="let item of themes">
+                                {{item.name}}
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="//jmlivingston.github.io/react-bootstrap-stylizer" target="_new">
+                            React Version
+                        </a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="//www.johnlivingston.io" target="_new">
+                            johnlivingston.io
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="//github.com/jmlivingston/angular-bootstrap-stylizer" target="_new">
+                            GitHub
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
 </div>

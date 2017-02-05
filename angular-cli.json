@@ -19,7 +19,7 @@
       "prefix": "app",
       "styles": [
         "styles.css",
-        "../node_modules/material-design-iconic-font/dist/css/material-design-iconic-font.min.css"
+        "../node_modules/font-awesome/css/font-awesome.min.css"
       ],
       "scripts": [
         "../node_modules/jquery/dist/jquery.slim.min.js",

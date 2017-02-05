@@ -7,6 +7,12 @@
 .navbar {
     @extend .navbar-inverse;
     @extend .bg-primary;
+    a.dropdown-item {        
+        &:hover {
+            background-color: $brand-info;
+            color: #fff;
+        }
+    }      
 }
 
 .btn:not(.btn-link) {
