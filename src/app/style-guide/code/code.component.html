@@ -1,6 +1,6 @@
 <div class="container" *ngIf="id !== ''">
-  <h3 class="float-left"><a href="/style-guide/{{id}}">{{title}}</a></h3>
-  <a class="float-right" href="/style-guide" *ngIf="showStyleGuideLink">Back to Style Guide</a>
+  <h3 class="float-left"><a href="#/style-guide-{{id}}">{{title}}</a></h3>
+  <a class="float-right" href="#/style-guide" *ngIf="showStyleGuideLink">Back to Style Guide</a>
   <div class="clearfix"></div>
   <div [innerHTML]="html | sanitizeHtml" ngNonBindable></div>
   <br />
