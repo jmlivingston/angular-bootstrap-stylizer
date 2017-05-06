@@ -14,7 +14,7 @@ export class ThemeService {
     }
 
     getTheme(): any {
-        const filteredThemes = this.themes.filter((x) => { return x.name.toString() === localStorage['theme'].toString(); });
+        const filteredThemes = this.themes.filter((theme) => { return theme.name.toString() === localStorage['theme'].toString(); });
         if (filteredThemes.length > 0) {
             return filteredThemes[0];
         } else {
@@ -28,7 +28,9 @@ export class ThemeService {
 
     setTheme(newValue) {
         localStorage['theme'] = newValue;
-        location.reload();
+        const filteredTheme = this.themes.filter((theme) => { return theme.name.toString() === newValue; })[0];
+        console.log(filteredTheme.name);
+        this.currentThemeSubject.next(filteredTheme);
     }
 
     setThemes() {

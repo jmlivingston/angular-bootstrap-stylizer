@@ -27,6 +27,9 @@ export class HomeComponent {
       return t.path.toLowerCase().indexOf('bootswatch') !== -1 && t.path.toLowerCase().indexOf('original') === -1;
     });
     this.currentTheme = this.themeService.getTheme();
+    themeService.currentTheme.subscribe((theme) => {
+      this.currentTheme = theme;
+    });
   }
 
   public updateTheme(item) {

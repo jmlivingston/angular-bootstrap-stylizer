@@ -14,6 +14,9 @@ export class HeaderComponent {
   constructor(private themeService: ThemeService) {
     this.themes = this.themeService.getThemes();
     this.currentTheme = this.themeService.getTheme();
+    themeService.currentTheme.subscribe((theme) => {
+      this.currentTheme = theme;
+    });
   }
 
   public updateTheme(item) {
